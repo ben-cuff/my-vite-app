@@ -1,0 +1,9 @@
+.day-container {
+	border: black solid 1px;
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+
+.sub-weather {
+    font-weight: bold;
+}

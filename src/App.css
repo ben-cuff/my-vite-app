@@ -6,6 +6,8 @@
 }
 
 .header-container {
-	border: gray solid 1px;
+	border: black solid 1px;
 	border-radius: 5px;
+	padding: 50px 20px;
+	background-color: gray;
 }
