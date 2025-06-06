@@ -1,11 +1,16 @@
 import PropTypes from "prop-types";
 import "./Day.css";
 
-export default function Day({ day, weather, temperature }) {
+export default function Day({ day, weather, temperature, icon }) {
 	return (
 		<div className="day-container">
 			<h3>{day}</h3>
-			<img src="cloud-outline.svg" />
+			<img
+				className="weather-icon"
+				src={`http://openweathermap.org/img/wn/${icon}.png`}
+				alt={weather}
+			/>
+
 			<p className="sub-weather">{weather}</p>
 			<p
 				className="temperature"
@@ -21,4 +26,5 @@ Day.propTypes = {
 	day: PropTypes.string.isRequired,
 	weather: PropTypes.string.isRequired,
 	temperature: PropTypes.string.isRequired,
+	icon: PropTypes.string.isRequired,
 };
