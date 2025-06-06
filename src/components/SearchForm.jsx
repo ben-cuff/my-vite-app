@@ -1,21 +1,18 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-export default function SearchForm() {
-	const [cityInput, setCityInput] = useState("");
+export default function SearchForm({ onDataSubmit }) {
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		const submittedData = event.target.elements.dataInput.value;
+		onDataSubmit(submittedData);
+	};
+	
 	return (
-		<form
-			onSubmit={(event) => {
-				event.preventDefault();
-				console.log(cityInput);
-				setCityInput("");
-			}}
-			className="search-form"
-		>
+		<form onSubmit={handleSubmit} className="search-form">
 			<input
 				className="search-input-city"
 				placeholder="enter city name here"
-				value={cityInput}
-				onChange={(e) => setCityInput(e.target.value)}
+				name="dataInput"
 			/>
 			<button type="submit" className="search-btn">
 				Submit
@@ -23,3 +20,7 @@ export default function SearchForm() {
 		</form>
 	);
 }
+
+SearchForm.propTypes = {
+	onDataSubmit: PropTypes.func.required,
+};
