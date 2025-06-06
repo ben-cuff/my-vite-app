@@ -1,0 +1,11 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+.header-container {
+	border: gray solid 1px;
+	border-radius: 5px;
+}
