@@ -26,7 +26,7 @@ function App() {
 					}
 					const data = await response.json();
 					const parsedData = parseForecaseData(data);
-					setWeatherData(parsedData);
+					sflixsteretWeatherData(parsedData);
 				} catch (error) {
 					console.error(error);
 				}

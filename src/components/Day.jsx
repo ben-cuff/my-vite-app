@@ -15,6 +15,7 @@ export default function Day({ day, weather, temperature, icon }) {
 			<p
 				className="temperature"
 				style={{ color: temperature >= 60 ? "orange" : "blue" }}
+
 			>
 				{temperature}
 			</p>
